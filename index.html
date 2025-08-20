@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kishor's Personal Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }body {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #ffeb3b;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffeb3b;
+}
+
+section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffeb3b;
+}
+
+p, label, textarea, input {
+  color: #000;
+}
+
+.card {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  max-width: 600px;
+  margin: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+form label {
+  margin: 10px 0 5px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #2575fc;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #6a11cb;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background: rgba(0,0,0,0.8);
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #ffeb3b;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+  </style>
+</head>
+<body><header>
+  <h1>Kishor's Website</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#upload">Upload</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header><!-- Homepage --><section id="home">
+  <h2>Welcome to My Website</h2>
+  <p class="card">Hi! I'm Kishor, a Class 9 Science Student. Explore my projects, hobbies, and more. You can also share your info with me!</p>
+</section><!-- About Me --><section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <img src="https://via.placeholder.com/150" alt="Profile Picture" style="border-radius:50%; margin-bottom:15px;">
+    <p><strong>Name:</strong> Kishor</p>
+    <p><strong>Education:</strong> Class 9, Science Student</p>
+    <p><strong>Hobbies:</strong> Coding, Gaming, Reading, Exploring Science</p>
+  </div>
+</section><!-- Upload Form --><section id="upload">
+  <h2>Upload Your Information</h2>
+  <div class="card">
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required><label for="info">Your Information:</label>
+  <textarea id="info" name="info" rows="4" required></textarea>
+
+  <label for="file">Upload File (optional):</label>
+  <input type="file" id="file" name="file">
+
+  <button type="submit">Submit</button>
+</form>
+
+  </div>
+</section><!-- Projects / Gallery --><section id="projects">
+  <h2>My Projects & Gallery</h2>
+  <div class="gallery">
+    <img src="https://via.placeholder.com/300x200" alt="Project 1">
+    <img src="https://via.placeholder.com/300x200" alt="Project 2">
+    <img src="https://via.placeholder.com/300x200" alt="Project 3">
+  </div>
+</section><!-- Contact --><section id="contact">
+  <h2>Contact Me</h2>
+  <div class="card">
+    <p>Email: <a href="mailto:kishor@example.com">kishor@example.com</a></p>
+    <p>Follow me on social media:</p>
+    <p>
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">GitHub</a>
+    </p>
+  </div>
+</section><footer>
+  <p>© 2025 Kishor. All rights reserved.</p>
+</footer></body>
+</html>
